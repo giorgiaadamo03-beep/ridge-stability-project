@@ -155,6 +155,8 @@ Each configuration is repeated with \textbf{20 random seeds}. In each repetition
 
 The main results are summarized in Table~\ref{tab:synthetic-results}, which compares Least Squares and Ridge in the two scenarios using Test MSE and the average prediction change.
 
+Looking at stability and prediction error separately across the different values of $\lambda$ helps show how the effect of regularization changes as the penalty becomes stronger.
+
 \begin{table}[ht]
     \centering
     \begin{tabular}{llcc}
@@ -222,6 +224,8 @@ The number of variables is kept fixed at $p=10$, while four sample sizes are con
 
 For each value of $n$, the same $75\%$--$25\%$ train--test split is used and the experiment is repeated with 20 seeds. For Ridge, $\lambda=0.01$ is fixed, so that the effect of sample size can be studied without changing the level of regularization at the same time.
 
+Comparing the two methods across increasing sample sizes also makes it easier to see how the prediction change decreases as more observations become available.
+
 The results show a clear decrease in the average prediction change as $n$ increases. For Least Squares, the value goes from $0.0777$ with $n=50$ to $0.0056$ with $n=500$. Ridge follows almost the same pattern, decreasing from $0.0763$ to $0.0056$.
 
 \begin{table}[ht]
@@ -259,6 +263,8 @@ This shows that stability does not depend only on the algorithm, but also on the
 Finally, the analysis is applied to the \emph{Seoul Bike Sharing Demand} dataset from the UCI Machine Learning Repository~\cite{uci2020seoul}. The dataset contains 8760 observations and 14 variables and describes, on an hourly basis, the number of rented bikes together with time and weather information. The response variable is \emph{Rented Bike Count}, which is the number of bikes rented in a given hour.
 
 Before fitting the models, a simple exploratory analysis is carried out. There are no missing values, so no imputation procedure is needed.
+
+The exploratory analysis focuses on the distribution of the response, its relationship with time and temperature, and the correlation between numerical predictors. These aspects are useful for understanding the structure of the data before comparing Least Squares and Ridge.
 
 The distribution of the response variable is skewed: most observations have a relatively low number of rentals, while in some hours the number of rented bikes is above 3000 (Figure~\ref{fig:target-distribution}).
 
@@ -323,6 +329,8 @@ This makes it possible to compare the results directly with those obtained on th
 \subsection{Results on the Real Dataset}
 
 The main results are summarized in Table~\ref{tab:real-results}. The table directly compares Least Squares and Ridge for different values of $\lambda$, considering both the test error and the average prediction change used as the empirical measure of stability.
+
+Considering stability and Test MSE across the same values of $\lambda$ makes it possible to see more clearly where improved stability starts to come at the cost of predictive performance.
 
 \begin{table}[ht]
     \centering
