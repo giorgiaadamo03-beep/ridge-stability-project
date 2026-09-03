@@ -87,3 +87,8 @@ The complete methodology, experiments, results, figures, and conclusions are ava
 ## Reference
 
 Bousquet, O. and Elisseeff, A. (2002). *Stability and Generalization*. Journal of Machine Learning Research, 2, 499–526.
+
+Hoerl, A. E. and Kennard, R. W. (1970). *Ridge Regression: Biased Estimation for Nonorthogonal Problems*. Technometrics, 12(1), 55–67.
+
+
+UCI Machine Learning Repository. (2020). *Seoul Bike Sharing Demand* [Dataset]. DOI: 10.24432/C5F62R.
