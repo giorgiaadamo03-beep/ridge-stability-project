@@ -37,9 +37,9 @@ Predictive performance is evaluated using **Mean Squared Error (MSE)** on the tr
 
 The project includes three main experiments:
 
-1. **Synthetic data:** comparison of Least Squares and Ridge using independent predictors (BASE scenario) and strongly correlated predictors (CORRELATED scenario, $\rho = 0.8$).
-2. **Sample size:** analysis of stability for $n \in \{50, 100, 200, 500\}$.
-3. **Real data:** application to the Seoul Bike Sharing Demand dataset, using different values of the Ridge regularization parameter $\lambda$.
+1. **Synthetic data:** comparison of Least Squares and Ridge using independent predictors (BASE scenario) and strongly correlated predictors (CORRELATED scenario, rho = 0.8).
+2. **Sample size:** analysis of stability for n = {50, 100, 200, 500}.
+3. **Real data:** application to the Seoul Bike Sharing Demand dataset, using different values of the Ridge regularization parameter lambda.
 
 For Ridge, the experiments use:
 
@@ -59,10 +59,10 @@ Dataset source: UCI Machine Learning Repository, *Seoul Bike Sharing Demand* (20
 
 The experiments show that the effect of Ridge depends on both the structure of the data and the strength of regularization.
 
-- With independent synthetic predictors, small values of $\lambda$ produce results very similar to Least Squares.
-- With correlated predictors, moderate regularization improves stability. In particular, $\lambda = 0.1$ reduces the average prediction change while keeping the increase in Test MSE limited.
+- With independent synthetic predictors, small values of lambda produce results very similar to Least Squares.
+- With correlated predictors, moderate regularization improves stability. In particular, lambda = 0.1 reduces the average prediction change while keeping the increase in Test MSE limited.
 - Both Least Squares and Ridge become more stable as the sample size increases.
-- On the Seoul Bike Sharing dataset, $\lambda = 0.1$ provides the best observed trade-off between stability and predictive performance. Stronger regularization further reduces sensitivity to individual observations but substantially increases prediction error.
+- On the Seoul Bike Sharing dataset, lambda = 0.1 provides the best observed trade-off between stability and predictive performance. Stronger regularization further reduces sensitivity to individual observations but substantially increases prediction error.
 
 ## How to Run
 
